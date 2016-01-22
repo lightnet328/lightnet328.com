@@ -1,0 +1,21 @@
+{
+  "name": "lightnet328.com",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "lightnet328"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
