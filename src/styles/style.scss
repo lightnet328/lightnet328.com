@@ -63,6 +63,10 @@ textarea {
   resize: none;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 li {
   list-style-type: none;
 }
@@ -420,6 +424,10 @@ li {
     }
   }
 
+  #site-main-outline {
+    padding-bottom: $site-footer-height - 20px;
+  }
+
   #site-hero {
     padding: 20px;
     #icon {
@@ -440,6 +448,18 @@ li {
   }
 
   #site-footer {
+    height: $site-footer-height - 20px;
+    line-height: $site-footer-height - 20px;
     min-width: $site-min-width;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #site-header-outline {
+    #site-title {
+      a {
+        font-size: 18px;
+      }
+    }
   }
 }
