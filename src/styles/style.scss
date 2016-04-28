@@ -193,18 +193,18 @@ li {
       clear: both;
       display: block;
     }
-    dd {
+    dt {
       font-size: 16px;
       line-height: 1.6;
       margin: 0.5em 1em;
       clear: left;
       float: left;
     }
-    dt {
+    dd {
       float: left;
       margin: 0.5em 0;
     }
-    dt + dt:before {
+    dd + dd:before {
       content: ",";
       margin-right: 0.5em;
     }
