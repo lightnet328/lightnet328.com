@@ -433,6 +433,12 @@ textarea {
 
   #site-hero {
     padding: 20px;
+    h2 {
+      font-size: 1.5em;
+      margin: 0;
+      line-height: 80px;
+    }
+
     #icon {
       width: 80px;
       height: 80px;
@@ -461,6 +467,14 @@ textarea {
   #site-title {
     a {
       display: none;
+    }
+  }
+
+  #site-hero {
+    #profile {
+      dl {
+        margin-left: -80px;
+      }
     }
   }
 
