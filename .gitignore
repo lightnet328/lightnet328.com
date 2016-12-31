@@ -2,3 +2,4 @@ bower_components
 node_modules
 /scripts
 /styles
+npm-debug.log
