@@ -4,6 +4,7 @@ var uglify = require("gulp-uglify");
 var sass = require("gulp-sass");
 var cssmin = require("gulp-cssmin");
 var autoprefixer = require("gulp-autoprefixer");
+var cssimport = require("gulp-cssimport");
 
 gulp.task("script", function() {
     gulp.src("src/scripts/**/*.js")
@@ -17,6 +18,10 @@ gulp.task("style", function() {
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(cssimport({
+          includePaths: ["styles"],
+          skipComments: false,
+        }))
         .pipe(cssmin())
         .pipe(gulp.dest("./styles"))
 });
