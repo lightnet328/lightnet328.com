@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 $site-width: 900px;
-$site-min-width: 360px;
+$site-min-width: 320px;
 $site-header-height: 80px;
 $site-footer-height: 100px;
 
@@ -63,14 +63,6 @@ textarea {
   resize: none;
 }
 
-ul {
-  padding-left: 20px;
-}
-
-li {
-  list-style-type: none;
-}
-
 /*
  * Outline
  */
@@ -90,6 +82,7 @@ li {
 
 #site-header-outline {
   width: 100%;
+  min-width: $site-min-width;
   height: $site-header-height;
   line-height: 1;
   background: #fefefe;
@@ -124,11 +117,15 @@ li {
 }
 
 #site-navigation {
-  margin-left: auto;
+  flex: 1;
+  margin-left: 20px;
   ul {
     margin: 0;
     display: flex;
+    justify-content: flex-end;
     line-height: 80px;
+    list-style-type: none;
+    padding: 0px;
     li {
       a {
         display: block;
@@ -156,6 +153,7 @@ li {
 
 #site-hero-outline {
   width: 100%;
+  min-width: $site-min-width;
   background: $md-indigo-800;
 }
 
@@ -166,7 +164,10 @@ li {
   max-width: $site-width;
   box-sizing: border-box;
   color: $color-white;
-  h1 small {
+  h2 {
+    font-size: 2em;
+  }
+  h2 small {
     color: #f8f8f8;
     font-size: 65%;
     margin-left: 0.4em;
@@ -217,6 +218,8 @@ li {
  */
 
 #site-main-outline {
+  width: 100%;
+  min-width: $site-min-width;
   padding-bottom: $site-footer-height;
 }
 
@@ -272,6 +275,7 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px;
+  list-style-type: none;
   li {
     width: 400px;
     border: 1px solid #f8f8f8;
@@ -411,7 +415,6 @@ li {
   }
 
   #site-header-outline {
-    min-width: $site-min-width;
     height: $site-header-height - 20px;
     line-height: $site-header-height - 20px;
     #site-title {
@@ -430,6 +433,12 @@ li {
 
   #site-hero {
     padding: 20px;
+    h2 {
+      font-size: 1.5em;
+      margin: 0;
+      line-height: 80px;
+    }
+
     #icon {
       width: 80px;
       height: 80px;
@@ -454,12 +463,25 @@ li {
   }
 }
 
-@media screen and (max-width: 390px) {
-  #site-header-outline {
-    #site-title {
-      a {
-        font-size: 18px;
+@media screen and (max-width: 409px) {
+  #site-title {
+    a {
+      display: none;
+    }
+  }
+
+  #site-hero {
+    #profile {
+      dl {
+        margin-left: -80px;
       }
+    }
+  }
+
+  #site-navigation {
+    margin-left: 0px;
+    ul {
+      justify-content: space-around;
     }
   }
 }
