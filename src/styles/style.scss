@@ -116,12 +116,15 @@ textarea {
 }
 
 #site-navigation {
-  margin-left: auto;
+  flex: 1;
+  margin-left: 20px;
   ul {
     margin: 0;
     display: flex;
+    justify-content: flex-end;
     line-height: 80px;
     list-style-type: none;
+    padding: 0px;
     li {
       a {
         display: block;
@@ -448,12 +451,17 @@ textarea {
   }
 }
 
-@media screen and (max-width: 390px) {
-  #site-header-outline {
-    #site-title {
-      a {
-        font-size: 18px;
-      }
+@media screen and (max-width: 409px) {
+  #site-title {
+    a {
+      display: none;
+    }
+  }
+
+  #site-navigation {
+    margin-left: 0px;
+    ul {
+      justify-content: space-around;
     }
   }
 }
