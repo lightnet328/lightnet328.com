@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
+var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var sass = require("gulp-sass");
 var cssmin = require("gulp-cssmin");
@@ -7,9 +8,15 @@ var autoprefixer = require("gulp-autoprefixer");
 var cssimport = require("gulp-cssimport");
 
 gulp.task("script", function() {
-    gulp.src("src/scripts/**/*.js")
+    gulp.src([
+      "node_modules/jquery/dist/jquery.min.js",
+      "src/scripts/**/*.js"
+    ])
         .pipe(plumber())
-        .pipe(uglify())
+        .pipe(concat("script.js"))
+        .pipe(uglify({
+          preserveComments: 'some'
+        }))
         .pipe(gulp.dest("./scripts"))
 });
 
