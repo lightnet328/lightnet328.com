@@ -9,7 +9,7 @@
     "watch": "node_modules/gulp/bin/gulp.js"
   },
   "author": "lightnet328",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
