@@ -1,7 +1,7 @@
 {
   "name": "lightnet328.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "http://lightnet328.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
