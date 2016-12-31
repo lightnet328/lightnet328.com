@@ -82,6 +82,7 @@ textarea {
 
 #site-header-outline {
   width: 100%;
+  min-width: $site-min-width;
   height: $site-header-height;
   line-height: 1;
   background: #fefefe;
@@ -152,6 +153,7 @@ textarea {
 
 #site-hero-outline {
   width: 100%;
+  min-width: $site-min-width;
   background: $md-indigo-800;
 }
 
@@ -213,6 +215,8 @@ textarea {
  */
 
 #site-main-outline {
+  width: 100%;
+  min-width: $site-min-width;
   padding-bottom: $site-footer-height;
 }
 
@@ -408,7 +412,6 @@ textarea {
   }
 
   #site-header-outline {
-    min-width: $site-min-width;
     height: $site-header-height - 20px;
     line-height: $site-header-height - 20px;
     #site-title {
