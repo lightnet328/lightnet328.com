@@ -21,6 +21,8 @@ gulp.task("style", function() {
         .pipe(gulp.dest("./styles"))
 });
 
+gulp.task("build", ["script", "style"]);
+
 gulp.task("default", function() {
     gulp.watch("src/scripts/**/*.js", ["script"]);
     gulp.watch("src/styles/**/*.scss", ["style"]);
