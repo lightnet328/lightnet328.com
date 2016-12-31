@@ -67,10 +67,6 @@ ul {
   padding-left: 20px;
 }
 
-li {
-  list-style-type: none;
-}
-
 /*
  * Outline
  */
@@ -129,6 +125,7 @@ li {
     margin: 0;
     display: flex;
     line-height: 80px;
+    list-style-type: none;
     li {
       a {
         display: block;
@@ -272,6 +269,7 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px;
+  list-style-type: none;
   li {
     width: 400px;
     border: 1px solid #f8f8f8;
