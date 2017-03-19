@@ -1,9 +1,7 @@
 FROM nginx:latest
 MAINTAINER lightnet328<lightnet328@gmail.com>
 
-EXPOSE 80
-
-COPY docker/nginx/default.conf /etc/nginx/conf.d/
+COPY nginx/default.conf /etc/nginx/conf.d/
 COPY index.html /var/www/
 COPY package.json /var/www/
 COPY gulpfile.js /var/www/
