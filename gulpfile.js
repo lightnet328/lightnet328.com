@@ -17,7 +17,7 @@ gulp.task("script", function() {
     .pipe(uglify({
       preserveComments: 'some'
     }))
-    .pipe(gulp.dest("./scripts"))
+    .pipe(gulp.dest("./assets/scripts"))
 });
 
 gulp.task("style", function() {
@@ -30,12 +30,18 @@ gulp.task("style", function() {
       skipComments: false,
     }))
     .pipe(cssmin())
-    .pipe(gulp.dest("./styles"))
+    .pipe(gulp.dest("./assets/styles"))
 });
 
-gulp.task("build", ["script", "style"]);
+gulp.task("image", function() {
+  gulp.src("src/images/**/*.png")
+    .pipe(gulp.dest("./assets/images"))
+});
+
+gulp.task("build", ["script", "style", "image"]);
 
 gulp.task("default", function() {
   gulp.watch("src/scripts/**/*.js", ["script"]);
   gulp.watch("src/styles/**/*.scss", ["style"]);
+  gulp.watch("src/images/**/*.png", ["image"]);
 });
