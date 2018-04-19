@@ -15,7 +15,9 @@ gulp.task("script", function() {
     .pipe(plumber())
     .pipe(concat("script.js"))
     .pipe(uglify({
-      preserveComments: 'some'
+      output: {
+        comments: /^!/
+      }
     }))
     .pipe(gulp.dest("./assets/scripts"))
 });
