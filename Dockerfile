@@ -4,6 +4,6 @@ ADD index.html package.json gulpfile.js src /var/www/
 
 WORKDIR /var/www
 
-RUN npm install
+RUN yarn install
 
-CMD npm run build && npm run watch
+CMD yarn run build && yarn run watch
