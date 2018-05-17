@@ -1,14 +1,14 @@
 {
   "name": "lightnet328.com",
   "version": "1.0.0",
-  "description": "http://lightnet328.com",
+  "description": "https://lightnet328.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/gulp/bin/gulp.js build",
-    "watch": "node_modules/gulp/bin/gulp.js"
+    "build": "gulp build",
+    "watch": "gulp"
   },
-  "author": "lightnet328",
+  "author": "lightnet328 <lightnet328@gmail.com> (https://lightnet328.com)",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
