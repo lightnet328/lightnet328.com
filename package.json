@@ -10,6 +10,10 @@
   },
   "author": "lightnet328 <lightnet328@gmail.com> (https://lightnet328.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lightnet328/lightnet328.com.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
