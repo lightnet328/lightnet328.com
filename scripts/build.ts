@@ -8,11 +8,15 @@ const args = arg({
 });
 
 const build = () => {
-  Object.keys(require.cache).forEach((key) => delete require.cache[key]);
-  const { render } = require("../src/document");
-  const filePath = path.resolve(__dirname, "../index.html");
-  fs.writeFileSync(filePath, render());
-  console.log(`${filePath} was generated`);
+  try {
+    Object.keys(require.cache).forEach((key) => delete require.cache[key]);
+    const { render } = require("../src/document");
+    const filePath = path.resolve(__dirname, "../index.html");
+    fs.writeFileSync(filePath, render());
+    console.log(`${filePath} was generated`);
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 build();
