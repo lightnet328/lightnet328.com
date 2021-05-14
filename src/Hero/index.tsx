@@ -124,7 +124,7 @@ export const Hero = () => {
             <dt>
               <i className="material-icons">location_on</i>
             </dt>
-            <dd>石川県</dd>
+            <dd>東京都</dd>
             <dt>
               <i className="material-icons">favorite</i>
             </dt>
