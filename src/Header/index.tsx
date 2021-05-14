@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  fontOpenSans,
-  siteHeaderHeight,
-  siteMinWidth,
-  siteWidth,
-} from "../constants";
+import { siteHeaderHeight, siteMinWidth, siteWidth } from "../constants";
 
 const Container = styled.div`
   width: 100%;
@@ -17,6 +12,7 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
 
   @media screen and (max-width: 767px) {
     min-width: auto;
@@ -36,35 +32,6 @@ const StyledHeader = styled.header`
   box-sizing: border-box;
   height: 100%;
   position: relative;
-`;
-
-const Title = styled.h1`
-  line-height: ${siteHeaderHeight}px;
-  margin: 0;
-  a {
-    color: #444444;
-    font-size: 28px;
-    font-family: ${fontOpenSans};
-    font-weight: 300;
-    transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    &:hover {
-      color: #1e90ff;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    font-size: 22px;
-  }
-
-  @media screen and (max-width: 479px) {
-    line-height: ${siteHeaderHeight - 20}px;
-  }
-
-  @media screen and (max-width: 409px) {
-    a {
-      display: none;
-    }
-  }
 `;
 
 const Navigation = styled.nav`
@@ -127,9 +94,6 @@ export const Header = () => {
   return (
     <Container>
       <StyledHeader id="header">
-        <Title>
-          <a href="/">lightnet328.com</a>
-        </Title>
         <Navigation>
           <ul>
             <li>

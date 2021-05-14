@@ -2,78 +2,65 @@ import React from "react";
 import styled from "styled-components";
 
 import {
+  colorBlack,
   colorWhite,
+  fontSizes,
   mdGrey_100,
-  mdIndigo_800,
   siteMinWidth,
   siteWidth,
+  spacing,
 } from "../constants";
 
-const Container = styled.div`
+const Container = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-width: ${siteMinWidth}px;
-  background: ${mdIndigo_800};
-`;
-
-const StyledHero = styled.header`
-  display: flex;
-  margin: 0 auto 20px;
-  padding: 40px;
-  max-width: ${siteWidth}px;
+  padding: ${spacing[32]};
   box-sizing: border-box;
+  background: #00695c;
   color: ${colorWhite};
-
-  h2 {
-    font-size: 2em;
-  }
-
-  h2 small {
-    color: #f8f8f8;
-    font-size: 65%;
-    margin-left: 0.4em;
-  }
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 
   a {
     color: ${mdGrey_100};
   }
-
-  @media screen and (max-width: 767px) {
-    padding: 30px;
-  }
-
-  @media screen and (max-width: 479px) {
-    h2 {
-      font-size: 1.5em;
-      margin: 0;
-      line-height: 80px;
-    }
-  }
 `;
 
 const Icon = styled.img`
-  width: 180px;
-  height: 180px;
-  border: 6px solid ${mdGrey_100};
-  border-radius: 94px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 124px;
+  height: 124px;
+  border: 4px solid ${mdGrey_100};
+  border-radius: 64px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+`;
 
-  @media screen and (max-width: 767px) {
-    width: 130px;
-    height: 130px;
-    border-width: 4px;
+const Name = styled.div`
+  margin-top: ${spacing[16]}px;
+
+  h2 {
+    margin: 0;
+    font-size: ${fontSizes[28]}px;
   }
 
-  @media screen and (max-width: 479px) {
-    width: 80px;
-    height: 80px;
-    border-width: 2px;
+  h2 small {
+    color: #f8f8f8;
+    font-size: ${fontSizes[18]}px;
+    margin-left: 0.4em;
   }
 `;
 
+const Job = styled.div`
+  margin-top: ${spacing[16]}px;
+  font-size: ${fontSizes[16]}px;
+`;
+
 const Profile = styled.div`
-  margin-left: 40px;
+  margin-top: ${spacing[16]}px;
   dl {
+    margin: 0;
     &:after {
       content: "";
       clear: both;
@@ -95,63 +82,50 @@ const Profile = styled.div`
       margin-right: 0.5em;
     }
   }
-
-  @media screen and (max-width: 767px) {
-    margin-left: 30px;
-  }
-
-  @media screen and (max-width: 479px) {
-    margin-left: 20px;
-  }
-
-  @media screen and (max-width: 409px) {
-    dl {
-      margin-left: -80px;
-    }
-  }
 `;
 
 export const Hero = () => {
   return (
     <Container>
-      <StyledHero>
-        <Icon id="icon" src="assets/images/icon.png" />
-        <Profile>
-          <h2>
-            らぃと<small>@lightnet328</small>
-          </h2>
-          <dl>
-            <dt>
-              <i className="material-icons">location_on</i>
-            </dt>
-            <dd>東京都</dd>
-            <dt>
-              <i className="material-icons">favorite</i>
-            </dt>
-            <dd>TypeScript</dd>
-            <dd>React</dd>
-            <dd>GraphQL</dd>
-            <dd>お布団</dd>
-            <dt>
-              <i className="material-icons">description</i>
-            </dt>
-            <dd>
-              <a
-                href="http://lightnet328.hatenablog.com/"
-                title="lightnet328's blog"
-              >
-                lightnet328's blog
-              </a>
-            </dd>
-            <dt>
-              <i className="material-icons">email</i>
-            </dt>
-            <dd>
-              <a href="mailto:lightnet328@gmail.com">lightnet328@gmail.com</a>
-            </dd>
-          </dl>
-        </Profile>
-      </StyledHero>
+      <Icon id="icon" src="assets/images/icon.png" />
+      <Name>
+        <h2>
+          らぃと<small>@lightnet328</small>
+        </h2>
+      </Name>
+      <Job>Software Engineer</Job>
+      <Profile>
+        <dl>
+          <dt>
+            <i className="material-icons">location_on</i>
+          </dt>
+          <dd>東京都</dd>
+          <dt>
+            <i className="material-icons">favorite</i>
+          </dt>
+          <dd>TypeScript</dd>
+          <dd>React</dd>
+          <dd>GraphQL</dd>
+          <dd>お布団</dd>
+          <dt>
+            <i className="material-icons">description</i>
+          </dt>
+          <dd>
+            <a
+              href="http://lightnet328.hatenablog.com/"
+              title="lightnet328's blog"
+            >
+              lightnet328's blog
+            </a>
+          </dd>
+          <dt>
+            <i className="material-icons">email</i>
+          </dt>
+          <dd>
+            <a href="mailto:lightnet328@gmail.com">lightnet328@gmail.com</a>
+          </dd>
+        </dl>
+      </Profile>
     </Container>
   );
 };

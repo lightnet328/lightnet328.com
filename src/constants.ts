@@ -8,5 +8,17 @@ export const fontOpenSans = `'Open Sans', sans-serif`;
 
 export const colorBlack = "#222222";
 export const colorWhite = "#ffffff";
-export const mdIndigo_800 = "#283593";
 export const mdGrey_100 = "#f5f5f5";
+
+export const fontSizes = {
+  28: 28,
+  18: 18,
+  16: 16,
+};
+
+export const spacing = {
+  8: 8,
+  16: 16,
+  24: 24,
+  32: 32,
+};
