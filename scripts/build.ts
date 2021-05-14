@@ -3,13 +3,13 @@ import path from "path";
 import arg from "arg";
 import chokidar from "chokidar";
 
-import { render } from "../src/document";
-
 const args = arg({
   "--watch": Boolean,
 });
 
 const build = () => {
+  Object.keys(require.cache).forEach((key) => delete require.cache[key]);
+  const { render } = require("../src/document");
   const filePath = path.resolve(__dirname, "../index.html");
   fs.writeFileSync(filePath, render());
   console.log(`${filePath} was generated`);
