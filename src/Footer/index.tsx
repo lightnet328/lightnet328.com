@@ -28,5 +28,5 @@ const Container = styled.div`
 `;
 
 export const Footer = () => {
-  return <Container>&copy; 2012 - 2018 lightnet328.com.</Container>;
+  return <Container>&copy; 2012 - 2021 lightnet328.com.</Container>;
 };
