@@ -128,9 +128,9 @@ export const Hero = () => {
             <dt>
               <i className="material-icons">favorite</i>
             </dt>
-            <dd>PHP</dd>
-            <dd>Python</dd>
-            <dd>機械学習</dd>
+            <dd>TypeScript</dd>
+            <dd>React</dd>
+            <dd>GraphQL</dd>
             <dd>お布団</dd>
             <dt>
               <i className="material-icons">description</i>
